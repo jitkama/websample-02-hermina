@@ -1,0 +1,9 @@
+/**
+ * Basic typography style for copy text
+ */
+ @import url('https://fonts.googleapis.com/css2?family=Caveat:wght@400;700&family=Indie+Flower&display=swap');
+
+body {
+  color: $text-color;
+  font: normal 125% / 1.4 $text-font-stack;
+}

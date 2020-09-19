@@ -1,0 +1,272 @@
+// -----------------------------------------------------------------------------
+// This file contains styles that are specific to the home page.
+// -----------------------------------------------------------------------------
+.banner {
+   background: url(../../img/hermina.jpg) center/cover fixed no-repeat;
+   min-height: 90vh;
+   .container {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      grid-template-rows: 1fr 3fr auto 1fr;
+      grid-gap: 5rem;
+      justify-content: center;
+   }
+
+   &_title {
+      grid-column: 1/3;
+      grid-row: 2/3;
+      background-color: rgba($light-grey, .8);
+      border-radius: 5px;  
+      color: $brand-color;
+      font-size: 1.2em;
+      text-transform: uppercase;
+      text-align: center;
+      padding: 0 .5rem;
+   }
+
+   &_text {
+      grid-column: 2/4;
+      grid-row: 3/4;
+      background-color: rgba($light-grey, .8);
+      border-radius: 5px;
+      padding: 2rem 3rem;
+   }
+}
+
+#hermina h1, 
+#prace h1, 
+#galerie h1 {
+   color: $dark-grey;
+   display: inline-block;
+   font-size: 1.5em;
+   padding-bottom: 1rem;
+   border-bottom: 4px solid $brand-color;
+} 
+/********************************
+=== SECTION HERMÍNA==============
+********************************/
+#hermina {
+   padding: 2rem 0;
+   background-color: #fff;
+   clip-path: polygon(0 0, 100% 0, 100% 90%, 50% 100%, 0 90%);
+}
+
+/********************************
+=== SECTION PRACE ===============
+********************************/
+#prace {
+   padding: 5rem 0 3rem;
+   background-color: $light-grey;
+   clip-path: polygon(0 0, 50% 5%, 100% 0, 100% 100%, 0 100%);
+}
+.hermina-jobs {
+   padding: 2rem 0;
+   display: grid;
+   grid-gap: 3rem;
+   grid-template-columns: repeat(auto-fill, minmax(290px, 1fr));
+   
+}
+.job-card {
+   background-color: #fff;
+   border-radius: 5px;
+   overflow: hidden;
+   &_img {
+      width: inherit;
+      height: auto;
+      object-fit: cover;
+      img {
+         width: 100%;
+         display: block;
+      }
+   }
+   &_body {
+      padding: 2rem;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+   }
+   &_desc {
+      flex: 1 0;
+      font-size: .8em;
+      margin-bottom: 1rem;
+   }
+   &_title {
+      font-weight: 700;
+      color: $brand-color;
+      text-transform: uppercase;
+      font-size: 1.2rem;
+      padding-bottom: 1rem;
+      margin-bottom: 1rem;
+      border-bottom: 1px solid $light-grey;
+   }
+   &_buttons {
+      display: flex;
+      justify-content: space-between;
+      button {
+         background-color: $brand-color;
+         color: #fff;
+         font-size: .8em;
+         padding: .5rem 1rem;
+         border: none;
+         outline: none;
+         border-radius: 5px;
+         cursor: pointer;
+      }
+      button:nth-child(1){
+         background-color: $dark-grey;
+      }
+   }
+}
+
+/********************************
+=== SECTION GALERIE =============
+********************************/
+#galerie {
+   padding: 3rem 0 5rem;
+}
+.galerie-wrap {
+   margin-top: 2rem;
+   display: grid;
+   grid-gap: 3rem;
+   grid-template-columns: repeat(auto-fill, minmax(290px, 1fr));
+}
+
+.galerie-img {
+   overflow:hidden;
+   object-fit: cover;
+   height: 220px;
+   cursor: pointer;
+   
+   img {
+      width: 100%;
+      //clip-path: circle(50% at 50% 50%);
+      display: block;
+      transition: transform .5s ease;
+   }
+}
+.galerie-img:hover img{
+   transform: scale(1.1);
+}
+
+
+/********************************
+=== KONTAKT =====================
+********************************/
+footer {
+   background-color: $dark-grey;
+   color: #fff;
+   padding: 2rem 0 0;
+
+   h3 {
+      color: $brand-color;
+   }
+   .container {
+      padding-bottom: 3rem;
+      display: grid;
+      grid-template-columns: 3fr 1fr 2fr;
+      grid-gap: 3rem;
+   }
+   .contacts ul {
+      list-style-type: none;
+      padding-left: 0;
+   }
+   .contacts i {
+      color: #fff;
+      width: 2rem;
+      text-align: center;
+   }
+   .contacts a:hover {
+      color: #fff;
+   }
+   
+   .jitka-img{
+      padding-top: 1rem;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+   }
+   .jitka-img_wrap {
+      clip-path: polygon(0% 0%, 90% 0%, 100% 100%, 10% 100%);
+
+      width: 100%;
+      object-fit: contain;
+      img {
+         width: 100%;
+      }
+   }
+}
+.copyright {
+   background-color: #222;
+   text-align: center;
+   font-size: 0.8em;
+   padding: 2rem 0;
+}
+
+/********************************
+=== MEDIA QUERIES ===============
+********************************/
+@media only screen and (max-width: 1100px) {
+   .banner {
+      background: url(../../img/hermina.jpg) center/cover fixed no-repeat;
+      min-height: 90vh;
+      .container {
+         grid-template-rows: 1rem 3fr auto 1rem;
+         grid-gap: 3rem;
+      }
+   
+      &_title {
+         grid-column: 2/4;
+         font-size: 1em;
+         text-transform: uppercase;
+         text-align: center;
+         padding: 0 .5rem;
+      }
+   
+      &_text {
+         grid-column: 1/3;
+      }
+   }
+   #prace {
+      clip-path: polygon(0 0, 100% 5%, 100% 100%, 0 95%);
+   }
+   footer .container {
+      grid-template-columns: 1fr 2fr;
+   }
+   footer .info {
+      grid-column: 1/4;
+   }
+   footer .jitka-img {
+      grid-column: 1/2;
+   }
+   footer .contacts {
+      grid-column: 2/4;
+   }
+}
+
+@media only screen and (max-width: 700px) {
+   .banner {
+      background: url(../../img/hermina.jpg) center/cover fixed no-repeat;
+      min-height: 90vh;
+      .container {
+         grid-template-rows: 1rem auto auto 1rem;
+         grid-gap: 3rem;
+      }
+   
+      &_title {
+         grid-column: 1/4;
+         
+       
+      }
+   
+      &_text {
+         grid-column: 1/4;
+      }
+   }
+   #prace {
+      padding: 3rem 0;
+      clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+   }
+   footer .container {
+      grid-template-columns: 1fr 1fr;
+   }
+}
