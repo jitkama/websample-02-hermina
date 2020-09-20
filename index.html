@@ -14,7 +14,7 @@
       <nav class="nav-menu">
          <div class="container">
             <!-- logo -->
-            <div class="nav-menu_logo">
+            <div class="nav-menu_logo" id="logo">
                Hermína Čeláková
             </div>
             <!-- hamburger menu toggle button -->
@@ -41,6 +41,11 @@
                </li>
             </ul>
          </div><!-- .container -->
+         <a href="#logo">
+         <div id="scrollnav" class="scrollnav">
+            <i class="fas fa-arrow-up"></i>
+            <span>nahoru</span>
+         </div></a>
       </nav>
       <section class="banner">
          <div class="container">
@@ -57,6 +62,7 @@
       </section>
    </header>
       <main>
+         
          <section id="hermina">
             <div class="container">
                <h1>Kdo je Hermína Čeláková?</h1>
@@ -178,8 +184,17 @@
          </section>
 
          <section id="galerie">
+            <div class="modal" id="modal">
+               <div class="modal-window">
+                  <button type="button" class="modal-window_close"><i class="fas fa-times"></i></button>
+                  <div class="modal-window_img">
+                     <img src="img/dogwalk.jpg" alt="Image" id="modal-image">
+                  </div>
+               </div>
+            </div>
             <div class="container">
                <h1>Galerie</h1>
+               <p>Click the image!</p>
                <div class="galerie-wrap">
                <div class="galerie-img">
                   <img src="img/drink.jpg" alt="Image">

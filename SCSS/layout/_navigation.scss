@@ -79,6 +79,37 @@
          text-decoration: none;
       }
    }
+   .scrollnav.change {
+      display: flex;
+   }
+
+   .scrollnav {
+      position: fixed;
+      bottom: 5rem;
+      right: 5rem;
+      width: 6rem;
+      height: 6rem;
+      border-radius: 50%;
+      display: none;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      color: #fff;
+      font-size: 1.2rem;
+      background-color: $brand-color;
+      z-index: 50;
+      cursor: pointer;
+   }
+
+   @media screen and (max-width: 1100px){
+      .scrollnav {
+         bottom: 3rem;
+         right: 3rem;
+         width: 6rem;
+         height: 6rem;
+         font-size: 1.2rem;
+      }
+   }
 
    @media screen and (max-width: 800px){
       
@@ -115,6 +146,14 @@
          background-color: $light-grey;
          border-bottom: none;
          border-right: none;
+      }
+
+      .scrollnav {
+         bottom: 2rem;
+         right: 2rem;
+         width: 5rem;
+         height: 5rem;
+         font-size: 1rem;
       }
    }
 }

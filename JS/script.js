@@ -10,16 +10,35 @@ hamburger.addEventListener('click',function(){
       item.classList.toggle('change');
    });
    navMenuMobile.classList.toggle('change');
-   console.log(navMenuMobile.classList);
 })
 
+// scrollY - show navigation button: ARROW UP
+const scrollBtn = document.getElementById('scrollnav');
+window.addEventListener("scroll", (event) => {
+   let scroll = this.scrollY;
+   if(scroll > window.innerHeight){
+      scrollBtn.classList.add('change');
+   }else{
+      scrollBtn.classList.remove('change');
+   }
+});
+
 // image gallery - display modal window
+const modal = document.getElementById('modal');
+const modalBtn = document.querySelector('.modal-window_close');
+const modalImg= document.getElementById('modal-image');
 let x;
 for (x=0; x < images.length; x++){
    images[x].addEventListener('click',function(item){
-      console.log(item);
+      const imgSource = item.path[0].attributes[0].nodeValue;
+      modalImg.src = imgSource;
+      modal.classList.toggle('display');
+   });
+   modalBtn.addEventListener('click',function(){
+      modal.classList.remove('display');
    })
 }
+
 
 // copyright - date
 const todayis = document.getElementById('todayis');
