@@ -4,7 +4,7 @@
   "description": "Package for Project 4 of 20projects 20 weeks",
   "main": "index.js",
   "scripts": {
-    "watch": "node-sass scss/main.scss css/main.css -w"
+    "watch": "node-sass scss/main.scss main.css -w"
   },
   "author": "Jitka Martínková",
   "license": "ISC",
