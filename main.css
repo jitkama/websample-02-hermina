@@ -521,7 +521,7 @@ body {
       font-size: 1rem; } }
 
 .banner {
-  background: url(../img/hermina.jpg) center/cover fixed no-repeat;
+  background: url(img/hermina.jpg) center/cover fixed no-repeat;
   min-height: 90vh; }
   .banner .container {
     display: grid;
