@@ -3,7 +3,7 @@
 // -----------------------------------------------------------------------------
 
 .banner {
-   background: url(img/hermina.jpg) center/cover fixed no-repeat;
+   background: url(../img/hermina.jpg) center/cover fixed no-repeat;
    min-height: 90vh;
    .container {
       display: grid;
@@ -51,7 +51,8 @@
 #hermina {
    padding: 4rem 0;
    background-color: #fff;
-   clip-path: polygon(0 0, 100% 0, 100% 90%, 50% 100%, 0 90%);
+   -webkit-clip-path: polygon(0 0, 100% 0, 100% 90%, 50% 100%, 0 90%);
+           clip-path: polygon(0 0, 100% 0, 100% 90%, 50% 100%, 0 90%);
 }
 
 /********************************
@@ -60,14 +61,14 @@
 #prace {
    padding: 5rem 0 4rem;
    background-color: $light-grey;
-   clip-path: polygon(0 0, 50% 5%, 100% 0, 100% 100%, 0 100%);
+   -webkit-clip-path: polygon(0 0, 50% 5%, 100% 0, 100% 100%, 0 100%);
+           clip-path: polygon(0 0, 50% 5%, 100% 0, 100% 100%, 0 100%);
 }
 .hermina-jobs {
    padding: 2rem 0;
    display: grid;
    grid-gap: 3rem;
    grid-template-columns: repeat(auto-fill, minmax(290px, 1fr));
-   
 }
 .job-card {
    background-color: #fff;
@@ -79,7 +80,8 @@
    &_img {
       width: inherit;
       height: auto;
-      object-fit: cover;
+      -o-object-fit: cover;
+         object-fit: cover;
       img {
          width: 100%;
          display: block;
@@ -123,7 +125,8 @@
          background-color: $dark-grey;
       }
       button:hover{
-         filter: brightness(1.2);
+         -webkit-filter: brightness(1.2);
+                 filter: brightness(1.2);
       }
    }
 }
@@ -173,7 +176,9 @@
          border-radius: 10px;
          overflow: hidden;
          
-         object-fit: cover;
+         -o-object-fit: cover;
+         
+            object-fit: cover;
 
          img {
             width: 100%;
@@ -192,7 +197,8 @@
 
 .galerie-img {
    overflow:hidden;
-   object-fit: cover;
+   -o-object-fit: cover;
+      object-fit: cover;
    height: 220px;
    cursor: pointer;
    
@@ -249,10 +255,12 @@ footer {
       align-items: center;
    }
    .jitka-img_wrap {
-      clip-path: polygon(0% 0%, 90% 0%, 100% 100%, 10% 100%);
+      -webkit-clip-path: polygon(0% 0%, 90% 0%, 100% 100%, 10% 100%);
+              clip-path: polygon(0% 0%, 90% 0%, 100% 100%, 10% 100%);
 
       width: 100%;
-      object-fit: contain;
+      -o-object-fit: contain;
+         object-fit: contain;
       img {
          width: 100%;
       }
@@ -290,7 +298,8 @@ footer {
       }
    }
    #prace {
-      clip-path: polygon(0 0, 100% 5%, 100% 100%, 0 95%);
+      -webkit-clip-path: polygon(0 0, 100% 5%, 100% 100%, 0 95%);
+              clip-path: polygon(0 0, 100% 5%, 100% 100%, 0 95%);
    }
    footer .container {
       grid-template-columns: 1fr 2fr;
@@ -327,7 +336,8 @@ footer {
    }
    #prace {
       padding: 3rem 0;
-      clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+      -webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+              clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
    }
    footer .container {
       grid-template-columns: 1fr 1fr;

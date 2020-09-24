@@ -521,7 +521,7 @@ body {
       font-size: 1rem; } }
 
 .banner {
-  background: url(img/hermina.jpg) center/cover fixed no-repeat;
+  background: url(../img/hermina.jpg) center/cover fixed no-repeat;
   min-height: 90vh; }
   .banner .container {
     display: grid;
@@ -561,6 +561,7 @@ body {
 #hermina {
   padding: 4rem 0;
   background-color: #fff;
+  -webkit-clip-path: polygon(0 0, 100% 0, 100% 90%, 50% 100%, 0 90%);
   clip-path: polygon(0 0, 100% 0, 100% 90%, 50% 100%, 0 90%); }
 
 /********************************
@@ -569,6 +570,7 @@ body {
 #prace {
   padding: 5rem 0 4rem;
   background-color: #ededed;
+  -webkit-clip-path: polygon(0 0, 50% 5%, 100% 0, 100% 100%, 0 100%);
   clip-path: polygon(0 0, 50% 5%, 100% 0, 100% 100%, 0 100%); }
 
 .hermina-jobs {
@@ -586,6 +588,7 @@ body {
   .job-card_img {
     width: inherit;
     height: auto;
+    -o-object-fit: cover;
     object-fit: cover; }
     .job-card_img img {
       width: 100%;
@@ -621,6 +624,7 @@ body {
     .job-card_buttons button:nth-child(1) {
       background-color: #444444; }
     .job-card_buttons button:hover {
+      -webkit-filter: brightness(1.2);
       filter: brightness(1.2); }
 
 /********************************
@@ -666,6 +670,7 @@ body {
       border: 5px solid #fff;
       border-radius: 10px;
       overflow: hidden;
+      -o-object-fit: cover;
       object-fit: cover; }
       .modal-window_img img {
         width: 100%;
@@ -679,6 +684,7 @@ body {
 
 .galerie-img {
   overflow: hidden;
+  -o-object-fit: cover;
   object-fit: cover;
   height: 220px;
   cursor: pointer; }
@@ -722,8 +728,10 @@ footer {
     justify-content: center;
     align-items: center; }
   footer .jitka-img_wrap {
+    -webkit-clip-path: polygon(0% 0%, 90% 0%, 100% 100%, 10% 100%);
     clip-path: polygon(0% 0%, 90% 0%, 100% 100%, 10% 100%);
     width: 100%;
+    -o-object-fit: contain;
     object-fit: contain; }
     footer .jitka-img_wrap img {
       width: 100%; }
@@ -753,6 +761,7 @@ footer {
     .banner_text {
       grid-column: 1/3; }
   #prace {
+    -webkit-clip-path: polygon(0 0, 100% 5%, 100% 100%, 0 95%);
     clip-path: polygon(0 0, 100% 5%, 100% 100%, 0 95%); }
   footer .container {
     grid-template-columns: 1fr 2fr; }
@@ -776,6 +785,7 @@ footer {
       grid-column: 1/4; }
   #prace {
     padding: 3rem 0;
+    -webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
     clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%); }
   footer .container {
     grid-template-columns: 1fr 1fr; } }
